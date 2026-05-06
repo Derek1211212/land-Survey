@@ -523,83 +523,128 @@
     </div>
   </section>
 
+<style>
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.4s ease;
+  }
+  .service-card:hover .service-image {
+    transform: scale(1.02);
+  }
+  /* Adjust icon position if needed */
+  .service-icon {
+    margin-top: 0.5rem;
+  }
+  /* Ensure text remains readable */
+  .service-card h3 {
+    margin-top: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    .service-image {
+      height: 150px;
+    }
+  }
+</style>
+
 <!-- Services -->
-  <section id="services">
-    <div class="container">
-      <div class="reveal">
-        <div class="section-label">What We Do</div>
-        <h2>Our Core Services</h2>
-        <p class="section-subhead">Comprehensive land and construction solutions tailored to your needs — delivered with accuracy and professionalism.</p>
+<section id="services">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">What We Do</div>
+      <h2>Our Core Services</h2>
+      <p class="section-subhead">Comprehensive land and construction solutions tailored to your needs — delivered with accuracy and professionalism.</p>
+    </div>
+    <div class="services-grid">
+      <!-- Original four cards -->
+      <div class="service-card reveal delay-2">
+        <div class="service-icon"><i class="fas fa-draw-polygon"></i></div>
+        <img class="service-image" src="images/ls.webp" alt="Land Surveying">
+        <h3>Land Surveying</h3>
+        <p>Precision boundary surveys, topographic mapping, cadastral surveys, and construction staking. We provide accurate spatial data for every project phase, ensuring legal compliance and technical reliability.</p>
       </div>
-      <div class="services-grid">
-        <!-- Original four cards -->
-        <div class="service-card reveal delay-2">
-          <div class="service-icon"><i class="fas fa-draw-polygon"></i></div>
-          <h3>Land Surveying</h3>
-          <p>Precision boundary surveys, topographic mapping, cadastral surveys, and construction staking. We provide accurate spatial data for every project phase, ensuring legal compliance and technical reliability.</p>
-        </div>
-        <div class="service-card reveal delay-3">
-          <div class="service-icon"><i class="fas fa-hand-holding-usd"></i></div>
-          <h3>Land Sales</h3>
-          <p>Verified and documented land parcels for sale. We connect buyers with legitimate, survey‑certified properties across the Western Region, handling due diligence and title verification.</p>
-        </div>
-        <div class="service-card reveal delay-4">
-          <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
-          <h3>Building &amp; Construction</h3>
-          <p>End‑to‑end construction support: site supervision, foundation layout, quality control, and project management for residential &amp; commercial builds. We turn plans into reality.</p>
-        </div>
-        <div class="service-card reveal delay-5">
-          <div class="service-icon"><i class="fas fa-file-signature"></i></div>
-          <h3>Land Registration</h3>
-          <p>Hassle‑free land title registration, document processing, and liaison with the Lands Commission. Secure your property rights with our expert guidance through the entire legal process.</p>
-        </div>
+      <div class="service-card reveal delay-3">
+        <div class="service-icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <img class="service-image" src="images/lss.jpg" alt="Land Sales">
+        <h3>Land Sales</h3>
+        <p>Verified and documented land parcels for sale. We connect buyers with legitimate, survey‑certified properties across the Western Region, handling due diligence and title verification.</p>
+      </div>
+      <div class="service-card reveal delay-4">
+        <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+        <img class="service-image" src="images/bc.jpg" alt="Building & Construction">
+        <h3>Building &amp; Construction</h3>
+        <p>End‑to‑end construction support: site supervision, foundation layout, quality control, and project management for residential &amp; commercial builds. We turn plans into reality.</p>
+      </div>
+      <div class="service-card reveal delay-5">
+        <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+        <img class="service-image" src="images/td.png" alt="Land Registration">
+        <h3>Land Registration</h3>
+        <p>Hassle‑free land title registration, document processing, and liaison with the Lands Commission. Secure your property rights with our expert guidance through the entire legal process.</p>
+      </div>
 
-        <!-- Four new survey‑specific cards (requested) -->
-        <div class="service-card reveal delay-6">
-          <div class="service-icon"><i class="fas fa-border-all"></i></div>
-          <h3>Boundary Demarcation &amp; Surveys</h3>
-          <p>Physical demarcation of property lines using GPS and total stations. We resolve disputes, place durable beacons, and provide legally defensible boundary reports for land registration or court proceedings.</p>
-        </div>
-        <div class="service-card reveal delay-7">
-          <div class="service-icon"><i class="fas fa-mountain"></i></div>
-          <h3>Topographic Surveys</h3>
-          <p>Detailed mapping of terrain features, elevations, drainage patterns, and existing structures. Essential for architectural design, earthwork calculations, flood risk assessment, and environmental planning.</p>
-        </div>
-        <div class="service-card reveal delay-8">
-          <div class="service-icon"><i class="fas fa-tractor"></i></div>
-          <h3>Crop / Farm / Land Compensation Surveys</h3>
-          <p>Systematic assessment of crop types, tree counts, land improvements, and structures to determine fair compensation in expropriation, lease agreements, or insurance claims. Fully compliant with valuation standards.</p>
-        </div>
-        <div class="service-card reveal delay-9">
-          <div class="service-icon"><i class="fas fa-gavel"></i></div>
-          <h3>Cadastral &amp; Legal Surveys</h3>
-          <p>Official surveys for title registration, subdivision, leasehold creation, and consent judgments. We produce plans that meet all Lands Commission requirements, helping you establish or transfer ownership with confidence.</p>
-        </div>
+      <!-- Four new survey‑specific cards -->
+      <div class="service-card reveal delay-6">
+        <div class="service-icon"><i class="fas fa-border-all"></i></div>
+        <img class="service-image" src="images/bd.jpg" alt="Boundary Demarcation">
+        <h3>Boundary Demarcation &amp; Surveys</h3>
+        <p>Physical demarcation of property lines using GPS and total stations. We resolve disputes, place durable beacons, and provide legally defensible boundary reports for land registration or court proceedings.</p>
+      </div>
+      <div class="service-card reveal delay-7">
+        <div class="service-icon"><i class="fas fa-mountain"></i></div>
+        <img class="service-image" src="images/ts.jpg" alt="Topographic Surveys">
+        <h3>Topographic Surveys</h3>
+        <p>Detailed mapping of terrain features, elevations, drainage patterns, and existing structures. Essential for architectural design, earthwork calculations, flood risk assessment, and environmental planning.</p>
+      </div>
+      <div class="service-card reveal delay-8">
+        <div class="service-icon"><i class="fas fa-tractor"></i></div>
+        <img class="service-image" src="images/fl.jpg" alt="Crop Compensation Surveys">
+        <h3>Crop / Farm / Land Compensation Surveys</h3>
+        <p>Systematic assessment of crop types, tree counts, land improvements, and structures to determine fair compensation in expropriation, lease agreements, or insurance claims. Fully compliant with valuation standards.</p>
+      </div>
+      <div class="service-card reveal delay-9">
+        <div class="service-icon"><i class="fas fa-gavel"></i></div>
+        <img class="service-image" src="images/cs.jpg" alt="Cadastral Surveys">
+        <h3>Cadastral &amp; Legal Surveys</h3>
+        <p>Official surveys for title registration, subdivision, leasehold creation, and consent judgments. We produce plans that meet all Lands Commission requirements, helping you establish or transfer ownership with confidence.</p>
+      </div>
 
-        <!-- Four newly added cards (exactly as requested) -->
-        <div class="service-card reveal delay-10">
-          <div class="service-icon"><i class="fas fa-draw-polygon"></i></div>
-          <h3>Layout and Plot Marking</h3>
-          <p>On‑site staking of building corners, road alignments, utility lines, and plot boundaries. We transfer your architectural or engineering drawings accurately to the ground, preventing costly construction errors.</p>
-        </div>
-        <div class="service-card reveal delay-11">
-          <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
-          <h3>AutoCAD Drawing Works</h3>
-          <p>Professional 2D and 3D drafting services: site plans, floor layouts, cross‑sections, and as‑built drawings. We convert field survey data into clean, layered CAD files ready for permitting or construction.</p>
-        </div>
-        <div class="service-card reveal delay-12">
-          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Contour Survey</h3>
-          <p>Generation of contour maps showing elevation changes at specified intervals. Critical for drainage design, cut‑and‑fill calculations, road grading, and identifying flood‑prone areas on your property.</p>
-        </div>
-        <div class="service-card reveal delay-13">
-          <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
-          <h3>GPS Static &amp; GPS RTK Survey</h3>
-          <p>High‑precision positioning using static GNSS for control networks and RTK for real‑time stakeout. Achieve centimetre‑level accuracy for large‑scale projects, cadastral work, and construction machine control.</p>
-        </div>
+      <!-- Four newly added cards -->
+      <div class="service-card reveal delay-10">
+        <div class="service-icon"><i class="fas fa-draw-polygon"></i></div>
+        <img class="service-image" src="images/ll.jpg" alt="Layout and Plot Marking">
+        <h3>Layout and Plot Marking</h3>
+        <p>On‑site staking of building corners, road alignments, utility lines, and plot boundaries. We transfer your architectural or engineering drawings accurately to the ground, preventing costly construction errors.</p>
+      </div>
+      <div class="service-card reveal delay-11">
+        <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+        <img class="service-image" src="images/aa.jpg" alt="AutoCAD Drawing Works">
+        <h3>AutoCAD Drawing Works</h3>
+        <p>Professional 2D and 3D drafting services: site plans, floor layouts, cross‑sections, and as‑built drawings. We convert field survey data into clean, layered CAD files ready for permitting or construction.</p>
+      </div>
+      <div class="service-card reveal delay-12">
+        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+        <img class="service-image" src="images/css.jpeg" alt="Contour Survey">
+        <h3>Contour Survey</h3>
+        <p>Generation of contour maps showing elevation changes at specified intervals. Critical for drainage design, cut‑and‑fill calculations, road grading, and identifying flood‑prone areas on your property.</p>
+      </div>
+      <div class="service-card reveal delay-13">
+        <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
+        <img class="service-image" src="images/gps.webp" alt="GPS Static & RTK Survey">
+        <h3>GPS Static &amp; GPS RTK Survey</h3>
+        <p>High‑precision positioning using static GNSS for control networks and RTK for real‑time stakeout. Achieve centimetre‑level accuracy for large‑scale projects, cadastral work, and construction machine control.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
   <!-- About -->
